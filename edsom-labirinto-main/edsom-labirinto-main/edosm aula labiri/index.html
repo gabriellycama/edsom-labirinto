@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <!-- aula  de arrow function e setInternal -->
+      <div id = "caixa"></div>
+<style>
+
+    body{
+        background-color: rgb(76, 79, 121);
+    }
+    #caixa{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 0, 221);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    #caixa2{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 0, 221);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+</style>
+<script>
+    let caixa = document.getElementById("caixa");
+    let x = 0
+    let y = 100
+    let direcao =""
+    document.addEventListener("keydown",(e)=>{// captura tecla
+        direcao =e.key;});
+
+    setInterval(()=>{
+      switch(direcao){
+     case "arrowRight": x+=5;break;
+
+     case"arrowLeft": y+=5;break;
+
+     case"arrowUp": x-=5; break;
+
+     case"arrowDown": y-=5;break;
+
+     
+      }
+      caixa.style.left = x+"px";
+      caixa.style.top = y+"px";
+      
+    },5);
+
+
+</script>
+</body>
+</html>

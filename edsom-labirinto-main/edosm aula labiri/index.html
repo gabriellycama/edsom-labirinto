@@ -24,28 +24,10 @@
 </style>
 <script>
     let caixa = document.getElementById("caixa");
-    let x = 0
-    let y = 100
-    let direcao ="direita"
-
+    let posicao = 0;
     setInterval(()=>{
-      switch(direcao){
-     case"direita": x+=500;if(x>300)direcao ="baixo"; 
-     break;
-
-     case"baixo": y+=500; if(y>300)direcao ="esquerda"; 
-     break;
-
-     case"esquerda": x-=500; if(x<0)direcao = "cima";break;
-
-     case"cima": y-=500; if(y<0)direcao = "direita";break;
-
-     
-      }
-      caixa.style.left = x+"px";
-      caixa.style.top = y+"px";
-      
-    },0.1);
+      posicao +=5;
+    },100);
 </script>
 </body>
 </html>
